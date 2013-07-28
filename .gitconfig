@@ -1,6 +1,6 @@
 [user]
-  name = Tom Hudson
-  email = mail@tomnomnom.com
+  name = Tom Rawcliffe
+  email = git@tomrawcliffe.co.uk
 [color]
   diff = auto
   status = auto
@@ -25,6 +25,3 @@
   mergeoptions = 
 [push]
   default = current
-[giggle]
-  main-window-maximized = false
-  main-window-geometry = 1269x839+117+89
