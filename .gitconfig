@@ -1,6 +1,6 @@
 [user]
   name = Tom Rawcliffe
-  email = git@tomrawcliffe.co.uk
+  email = thomas.rawcliffe@bskyb.com
 [color]
   diff = auto
   status = auto
@@ -8,10 +8,10 @@
 [color "status"]
   added = green
   changed = blue
-  untracked = red 
+  untracked = red
 [color "diff"]
   meta = yellow
-  old = red 
+  old = red
   new = green
 [alias]
   st = status
@@ -20,8 +20,18 @@
   tm = merge --no-ff --no-commit
   pp = !git pull && git push
   rm-untracked = !rm $(git ls-files --other --exclude-standard)
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  bmerge = merge --no-ff --no-commit
+  newbranch = "!git checkout -b $1; git push; git branch --set-upstream-to=$1 origin/$1 #"
+  ru = "!git fetch; git clean -d -f; git reset --hard @{u}"
+  switch = "!git fetch; git branch -d $1; git checkout $1"
+  rt = "!git fetch; git clean -d -f; git reset --hard origin/$1"
+  review = log -p --reverse @{u}..HEAD
 [core]
   editor = /usr/bin/vim
-  mergeoptions = 
+  mergeoptions =
 [push]
   default = current
+[grep]
+  linenumber = true
+  color = auto

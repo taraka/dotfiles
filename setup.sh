@@ -6,9 +6,9 @@ function linkDotfile {
   dateStr=$(date +%Y-%m-%d-%H%M)
 
   if [ -h ~/${1} ]; then
-    # Existing symlink 
+    # Existing symlink
     echo "Removing existing symlink: ${dest}"
-    rm ${dest} 
+    rm ${dest}
 
   elif [ -f "${dest}" ]; then
     # Existing file
@@ -28,12 +28,10 @@ function linkDotfile {
 linkDotfile .vim
 linkDotfile .vimrc
 linkDotfile .gvimrc
-linkDotfile .ackrc
 linkDotfile .bashrc
+linkDotfile .profile
 linkDotfile .gitconfig
 linkDotfile .tmux.conf
-linkDotfile .goomwwmrc
-linkDotfile .inputrc
 
 # Update for vundle
 git submodule init
