@@ -1,10 +1,4 @@
-"call pathogen#infect()
-"" Configuration file for vim
-"set modelines=0		" CVE-2007-2438
-"
-"" Solarized stuff
-"let g:solarized_termtrans = 1
-"set background=dark
+
 "colorscheme desert
 
 " Vundle
@@ -28,8 +22,8 @@ Bundle 'tomasr/molokai'
 Bundle 'kien/ctrlp.vim'
 
 " Required for vundle
-"filetype plugin indent on 
-filetype plugin on 
+"filetype plugin indent on
+filetype plugin on
 
 " Highlighting
 syntax on
@@ -61,23 +55,23 @@ set hlsearch
 set showmatch
 
 " Enable jumping into files in a search buffer
-set hidden 
+set hidden
 
 " Make backspace a bit nicer
 set backspace=eol,start,indent
 
 " Enable the mouse
-set mouse=a
+" set mouse=a
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 
 " remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" more powerful backspacing
+set nocompatible    " Use Vim defaults instead of 100% vi compatibility
+set backspace=2     " more powerful backspacing
 set number
 set ai                  " auto indenting
 set history=100         " keep 100 lines of history
-set ruler 		" show the cursor position
+set ruler       " show the cursor position
 set hlsearch            " highlight the last searched term
 
 " Enable tab complete of file names
@@ -100,7 +94,7 @@ set hlsearch
 set showmatch
 
 " Enable jumping into files in a search buffer
-set hidden 
+set hidden
 
 " Indentation
 set shiftwidth=4
@@ -110,12 +104,12 @@ set shiftround
 set expandtab
 
 " Switch tabs
-nmap <F8> <Esc>:tabp<CR> 
-nmap <F9> <Esc>:tabn<CR> 
-nmap <F10> <Esc>:tabc<CR> 
-imap <F8> <Esc>:tabp<CR> 
-imap <F9> <Esc>:tabn<CR> 
-imap <F10> <Esc>:tabc<CR> 
+nmap <F8> <Esc>:tabp<CR>
+nmap <F9> <Esc>:tabn<CR>
+nmap <F10> <Esc>:tabc<CR>
+imap <F8> <Esc>:tabp<CR>
+imap <F9> <Esc>:tabn<CR>
+imap <F10> <Esc>:tabc<CR>
 
 
 "Toggle line-wrap
@@ -147,6 +141,6 @@ au BufWrite /private/etc/pw.* set nowritebackup
 
 
 " NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <F2> :NERDTreeToggle<CR>
 
