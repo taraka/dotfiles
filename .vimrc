@@ -144,3 +144,5 @@ au BufWrite /private/etc/pw.* set nowritebackup
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <F2> :NERDTreeToggle<CR>
 
+let $XIKI_DIR = "~/xiki"
+source ~/xiki/etc/vim/xiki.vim

@@ -10,7 +10,6 @@ bold=$(tput -Txterm bold)
 reset=$(tput -Txterm sgr0)
 
 trap 'SECONDS=0' DEBUG
-export PS1='your_normal_prompt_here ($SECONDS) # '
 
 # Git branch in prompt.
 parse_git_branch() {
@@ -29,6 +28,7 @@ __exit_status() {
 }
 
 export PS1="\[\$bold\]\[\$black\][\[\$dk_blue\]took: \${SECONDS}s\[\$black\]]\n\n[\[\$(__exit_status)\]\@\[\$black\]]-[\[\$green\]\u\[\$black\]]-[\[\$yellow\]\h\[\$black\]]-[\[$pink\]\w\[\$black\]]\$(parse_git_branch)\[\$reset\]\n\[$reset\]$ "
+export npm_config_registry=http://gueacontroltst01.skybet.net:5984
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash

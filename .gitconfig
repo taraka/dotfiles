@@ -35,3 +35,5 @@
 [grep]
   linenumber = true
   color = auto
+[rebase]
+	autosquash = true
